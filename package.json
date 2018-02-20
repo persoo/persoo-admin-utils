@@ -1,0 +1,40 @@
+{
+  "name": "persoo-admin-utils",
+  "version": "0.2.0",
+  "description": "Utils for work with persoo-admin objects.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "lint": "jshint lib/**/**.js",
+    "build": "npm run build:tests",
+    "build:tests": "mkdir -p build && node_modules/browserify/bin/cmd.js test/index.js > build/test.js",
+    "watch:tests": "watch 'npm run build:tests' ./test ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/persoo/persoo-admin-utils.git"
+  },
+  "keywords": [
+    "Persoo",
+    "utils",
+    "preview",
+    "render"
+  ],
+  "author": "Jakub Cerny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/persoo/persoo-admin-utils/issues"
+  },
+  "homepage": "https://github.com/persoo/persoo-admin-utils#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
+    "jshint": "latest",
+    "mocha": "^2.5.3",
+    "watch": "latest"
+  },
+  "dependencies": {}
+}

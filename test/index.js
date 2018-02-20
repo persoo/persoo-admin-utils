@@ -1,0 +1,2 @@
+require('./renderTemplatesTest');
+require('./getUsedVariablesTest');
