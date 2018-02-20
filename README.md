@@ -1,6 +1,6 @@
-# persoo-templates
+# persoo-admin-utils
 
-Templates for Persoo widgets (in page web parts, emails,...)
+Utilities for Persoo Admin Objects used both on Persoo server and Persoo UI.
 
  * [Installation](#installation)
  * [Render Templates Usage](#render-templates-usage)
@@ -70,7 +70,7 @@ I.e. ItemTemplate: "<%= abc %>" will be kept as it is. It's usefull for adding t
             fieldID: 'myFieldValue'
         },
         scenarios: [
-            {id: 'products1', scenarioID: 'sampleScenarioID'}
+            {id: 'products1', scenarioID: 'SCE1'}
         ]
     };
     var contentTemplate = {
