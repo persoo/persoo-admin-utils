@@ -4,6 +4,7 @@ Utilities for Persoo Admin Objects used both on Persoo server and Persoo UI.
 
  * [Installation](#installation)
  * [Render Templates Usage](#render-templates-usage)
+ * [Convert value to persoo DataType](#convert-to-persoo-datatype)
  * [Used Variables Usage](#used-variables-usage)
  * [Tests](#tests)
  * [Contributing](#contributing)
@@ -145,6 +146,20 @@ var offer = {
 thus Persoo developers calls
 ```
 var renderedHTML = persooTemplates.render(templateString, offer.variants[0], context);
+```
+
+## Convert to persoo dataType
+... to convert any value to desired persoo data type. Or to get error message.
+
+```
+convertToDataType(value, dataType);
+result = convertToDataType("123", 'longList'); // will return
+result == {
+    status: 'ok', // or 'error'
+    value: [123]
+    // errorMessage: 'Cannot covert ...' // for errors statuses
+}
+
 ```
 
 ## Tests
