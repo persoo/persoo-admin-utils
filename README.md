@@ -4,7 +4,7 @@ Utilities for Persoo Admin Objects used both on Persoo server and Persoo UI.
 
  * [Installation](#installation)
  * [Render Templates Usage](#render-templates-usage)
- * [Convert value to persoo DataType](#convert-to-persoo-datatype)
+ * [Convert Value to Persoo DataType](#convert-to-persoo-datatype)
  * [Used Variables Usage](#used-variables-usage)
  * [Tests](#tests)
  * [Contributing](#contributing)
@@ -63,7 +63,7 @@ I.e. ItemTemplate: "<%= abc %>" will be kept as it is. It's usefull for adding t
 ... to list all variables from visitor profile, which are used in content templates and referred algorithms (possibly recursively called)
 
 ```javascript
-    var var getUsedVariables = require('persoo-admin-utils/getUsedVariables');
+    var getUsedVariables = require('persoo-admin-utils/getUsedVariables');
 
     var offerVariantConfig = {
         templateID: 'templateID1',
@@ -151,15 +151,16 @@ var renderedHTML = persooTemplates.render(templateString, offer.variants[0], con
 ## Convert to persoo dataType
 ... to convert any value to desired persoo data type. Or to get error message.
 
-```
-convertToDataType(value, dataType);
-result = convertToDataType("123", 'longList'); // will return
+```javascript
+var convertToDataType = require('persoo-admin-utils/convertToDataType');
+
+// convertToDataType(value, dataType);
+result = convertToDataType.convertToDataType("123", 'longList'); // will return
 result == {
     status: 'ok', // or 'error'
     value: [123]
     // errorMessage: 'Cannot covert ...' // for errors statuses
 }
-
 ```
 
 ## Tests
