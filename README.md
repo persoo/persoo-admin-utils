@@ -21,7 +21,7 @@ Utilities for Persoo Admin Objects used both on Persoo server and Persoo UI.
 Include js library in your code. Then you can render "persoo templates" by calling `persooTemplates.render()` and providing widget instance (content and configuration for each template) and context (global settings related to each customer, i.e. recommended products to be rendered).
 
 ```javascript
-    var persooTemplates = require('persoo-admin-utils/templates');
+    var persooTemplates = require('persoo-admin-utils/lib/templates');
 
     var templateString = "Master template using predefined field as EJS variables, i.e. <%= fieldID %>";    
     var offerContentInstance = {
@@ -63,7 +63,7 @@ I.e. ItemTemplate: "<%= abc %>" will be kept as it is. It's usefull for adding t
 ... to list all variables from visitor profile, which are used in content templates and referred algorithms (possibly recursively called)
 
 ```javascript
-    var getUsedVariables = require('persoo-admin-utils/getUsedVariables');
+    var getUsedVariables = require('persoo-admin-utils/lib/getUsedVariables');
 
     var offerVariantConfig = {
         templateID: 'templateID1',
@@ -152,7 +152,7 @@ var renderedHTML = persooTemplates.render(templateString, offer.variants[0], con
 ... to convert any value to desired persoo data type. Or to get error message.
 
 ```javascript
-var convertToDataType = require('persoo-admin-utils/convertToDataType');
+var convertToDataType = require('persoo-admin-utils/lib/convertToDataType');
 
 // convertToDataType(value, dataType);
 result = convertToDataType.convertToDataType("123", 'longList'); // will return
