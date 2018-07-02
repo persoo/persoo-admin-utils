@@ -112,4 +112,20 @@ describe('convert and validate to dataType', function() {
             }
         }
     });
+
+    it('isNumeric()', function() {
+        var testCases = [
+            { dataType: 'boolean', result: false },
+            { dataType: 'long', result: true },
+            { dataType: 'double', result: true },
+            { dataType: 'string', result: false },
+            { dataType: 'stringList', result: false },
+            { dataType: 'unknownId', result: false }
+        ];
+        for (var i = 0; i < testCases.length; i++) {
+            var testCase = testCases[i];
+            var result = convertToDataType.isNumeric(testCase.dataType);
+            expect(result).to.equal(testCase.result);
+        }
+    });
 });

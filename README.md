@@ -163,6 +163,13 @@ result == {
 }
 ```
 
+You may also use methods
+```
+convertToDataType.isNumeric(dataType): boolean
+convertToDataType.getBasicDataType(dataType): string of ['boolean', 'long', 'double', 'string',...]
+```
+
+
 ## Tests
 
   `npm test`
