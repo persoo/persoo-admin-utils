@@ -1,6 +1,6 @@
 {
   "name": "persoo-admin-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Utils for work with persoo-admin objects.",
   "main": "lib/index.js",
   "scripts": {

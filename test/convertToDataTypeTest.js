@@ -8,6 +8,7 @@ describe('convert and validate to dataType', function() {
     it('convertToBasicDataType()', function() {
         var testCases = [
             { value: true, dataType: 'boolean', result: true, exception: false },
+            { value: 'true', dataType: 'boolean', result: true, exception: false },
             { value: 123, dataType: 'boolean', result: true, exception: false },
             { value: 123.45, dataType: 'boolean', result: true, exception: false },
             { value: '123', dataType: 'boolean', result: true, exception: false },
@@ -17,6 +18,7 @@ describe('convert and validate to dataType', function() {
             { value: {}, dataType: 'boolean', result: true, exception: false },
 
             { value: false, dataType: 'boolean', result: false, exception: false },
+            { value: 'false', dataType: 'boolean', result: false, exception: false },
             { value: 0, dataType: 'boolean', result: false, exception: false },
             { value: 0.0, dataType: 'boolean', result: false, exception: false },
             { value: "", dataType: 'boolean', result: false, exception: false },
